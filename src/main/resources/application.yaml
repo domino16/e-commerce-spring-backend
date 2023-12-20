@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommercedb
+    username: postgres
+    password: 123
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      mode: always # always validates spring init sql script db schema, even in not embedded DBs
+  data:
+    rest:
+      base-path: /api
+
+  jpa:
+    defer-datasource-initialization: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+allowed:
+  origins: http://localhost:4200
+
+stripe:
+  webhook:
+    secret: whsec_bddc3d3cd96003be1c457bef7e8263e23be343c164c4518490f48c7c342671c3
+  key:
+    secret: sk_test_51OHo9FC9PPgxaf0AmmHIIsayNw1Wxtw9KT3bLKm2jNwUxLEYbJa4BfZmIHZhBGDNI29cpb0NbJWaudSs021DJliH001mc3jPjx
+
+
