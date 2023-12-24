@@ -38,6 +38,9 @@ public class Product {
     @Column(name = "image_url")
     private String imageUrl;
 
+    @Column(name = "second_image_url")
+    private String secondImageUrl;
+
     @Column(name = "active")
     private boolean active;
 
